@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Donate to Bolsonaro</title>
+  <style>
+    /* CSS Styles */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f5f5f5;
+    }
+
+    .container {
+      max-width: 500px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #ffffff;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+      text-align: center;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="number"] {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+
+    input[type="submit"] {
+      width: 100%;
+      padding: 10px;
+      background-color: #4CAF50;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Donate to Bolsonaro</h1>
+    <form id="donationForm">
+      <input type="text" id="name" placeholder="Name" required>
+      <input type="email" id="email" placeholder="Email" required>
+      <input type="number" id="amount" placeholder="Amount (in USD)" required>
+      <input type="submit" value="Donate">
+    </form>
+  </div>
+
+  <script>
+    // JavaScript
+    document.getElementById("donationForm").addEventListener("submit", function(event) {
+      event.preventDefault(); // Prevent form submission
+
+      var name = document.getElementById("name").value;
+      var email = document.getElementById("email").value;
+      var amount = document.getElementById("amount").value;
+
+      // Here you can add code to process the donation and redirect to a payment gateway or perform any other necessary actions
+
+      alert("Thank you, " + name + "! Your donation of $" + amount + " has been received.");
+
+      // Clear form fields after submission
+      document.getElementById("name").value = "";
+      document.getElementById("email").value = "";
+      document.getElementById("amount").value = "";
+    });
+  </script>
+</body>
+</html>
